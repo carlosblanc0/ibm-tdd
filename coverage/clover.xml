@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1650050840341" clover="3.2.0">
-  <project timestamp="1650050840341" name="All files">
+<coverage generated="1650291679427" clover="3.2.0">
+  <project timestamp="1650291679427" name="All files">
     <metrics statements="23" coveredstatements="21" conditionals="3" coveredconditionals="2" methods="2" coveredmethods="2" elements="28" coveredelements="25" complexity="0" loc="23" ncloc="23" packages="1" files="1" classes="1"/>
     <file name="CreateClient.ts" path="/home/cblanco/Development/tdd-e2e/src/services/CreateClient.ts">
       <metrics statements="23" coveredstatements="21" conditionals="3" coveredconditionals="2" methods="2" coveredmethods="2"/>
