@@ -16,9 +16,9 @@ A more in-depth wirte-up on end-to-end tests, and testing.
 - In this instance, I've used a SQL database for testing purposes to simulate a real world scenario where there's a need to for not only testing suite, but also distinct databases; one for testing, one for production. For this example, and according to the pattern called Command/Query Segregation, CreateCleint.spec.ts isn't returning anything since it's a Write/update/delete command as opposed to a query where the expected behavior would be to return something. See IBM's Architecture Center article for more information on [CQRS](https://www.ibm.com/cloud/architecture/architectures/event-driven-cqrs-pattern/). 
 
 ## Reports
-![report](assets/report.png)
-![ss-1](assets/ss-1.png)
-![ss-2](assets/ss-2.png)
+![report](https://github.com/carlosblanc0/ibm-tdd/blob/main/assets/report.png?raw=true)
+![ss-1](https://github.com/carlosblanc0/ibm-tdd/blob/main/assets/ss-1.png?raw=true)
+![ss-2](https://github.com/carlosblanc0/ibm-tdd/blob/main/assets/ss-2.png?raw=true)
 ## Dependencies
 - Prisma, Jest, TypeScript, SWC/core and SWC/Jest, among [others](package.json).
 
