@@ -1,36 +1,38 @@
 
 # Understand and demonstrate test-driven development
 
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
-![Netlify](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
 
-A more in-depth guide on end-to-end tests
-![portfolio](portfolio-gif.gif)
+A more in-depth wirte-up on end-to-end tests, and testing.
 
 ## Introduction
 - Unit tests: usually used to test a given compononent in an isolated envinrement.
 - Integration tests: usually used to test more than one component and how they interacted within the stack once those are running.
-- End-to-End: programmatically simulates end user behavior. 
+- End-to-End: programmatically simulates end user behavior. Usually has its own testing/mock database - which is what we've done during the scope of this project. See [prisma-test-enviroment.ts](prisma-test-enviroment.ts) for more details. 
 
 ## Rationale
-- In this instance, I've used a PostGres Databse for testing purpose to simulate a real world scenario where there;s a need to split production databses and testing database since our tests should NOT alter the beavior of one another. In other words a given test should interfere with another test.
+- In this instance, I've used a SQL database for testing purposes to simulate a real world scenario where there's a need to for not only testing suite, but also distinct databases; one for testing, one for production. For this example, and according to the pattern called Command/Query Segregation, CreateCleint.spec.ts isn't returning anything since it's a Write/update/delete command as opposed to a query where the expected behavior would be to return something. See IBM's Architecture Center article for more information on [CQRS](https://www.ibm.com/cloud/architecture/architectures/event-driven-cqrs-pattern/). 
 
+## Reports
+![report](assets/report.png)
+![ss-1](assets/ss-1.png)
+![ss-2](assets/ss-2.png)
 ## Dependencies
-- Prisma, Jest, TypeScript, SWC/core and SWC/Jest
+- Prisma, Jest, TypeScript, SWC/core and SWC/Jest, among [others](package.json).
 
 ## Run Locally
-
 Clone the project
 
 ```bash
-  git clone https://github.com/carlosblanc0/portfolio-app.git
+  git clone https://github.com/carlosblanc0/ibm-tdd
 ```
 
 Go to the project directory
 
 ```bash
-  cd portfolio-app
+  cd tdd-e2e
 ```
 
 Install dependencies
@@ -45,30 +47,29 @@ Start the server
   npm run start
 ```
  
- ## Live Demo
->  https://www.carlosablanco.com/post
 
+Spin up a PostgreeSQL database (I've used [https://cockroachlabs.cloud/](http://www.elephantsql.com/). Make sure to pick the free tier for demoing purposes)
 
-## Acknowledgements
+```bash
+touch .env
+```
 
- - [kapehe-ok](https://github.com/kapehe-ok)
+```bash
+# Environment variables declared in this file are automatically made available to Prisma.
+# See the documentation for more detail: https://pris.ly/d/prisma-schema#accessing-environment-variables-from-the-schema
 
+# Prisma supports the native connection string format for PostgreSQL, MySQL, SQLite, SQL Server, MongoDB and CockroachDB (Preview).
+# See the documentation for all the connection string options: https://pris.ly/d/connection-strings
+
+DATABASE_URL="`postgresql://${dbUser}:${dbPass}@${dbHost}:${dbPort}/${dbName}?schema=${this.schema}`;"
+```
 
 ## Appendix and FAQ
 
 **Find this document incomplete?** Open an issue and I will get on it ASAP!
 
-###### tags: `Blogging` 
+###### tags: `Tests`, `Cloud`, `End-to-End`
 
-##### Useful Triage
-- npx prisma migrate dev
-- npx prims studio
 
-- Repository Pattern / Data Mapper Pattern
-- Dependency Inversion Principle | DevIQ
-
-- For this exaple, CreateCleint.spec.ts isn't returning anything since it's a Write/update/delete command as opposed to a query where it'd the expected behavior would be to return something (PAttern: Command/Query Segregation)
-
-- [ ] todo add prisma test envicomrnet page
 
 
