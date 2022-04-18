@@ -69,5 +69,6 @@ Start the server
 
 - For this exaple, CreateCleint.spec.ts isn't returning anything since it's a Write/update/delete command as opposed to a query where it'd the expected behavior would be to return something (PAttern: Command/Query Segregation)
 
-cockroach sql --url "postgresql://carlos:rT1e2A_1szLOeWoPToq0kA@free-tier14.aws-us-east-1.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full&options=--cluster%3Dbossy-druid-1342"
-rT1e2A_1szLOeWoPToq0kA
+- [ ] todo add prisma test envicomrnet page
+
+
