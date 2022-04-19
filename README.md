@@ -48,7 +48,7 @@ Start the server
 ```
  
 
-Spin up a PostgreeSQL database (I've used [https://cockroachlabs.cloud/](http://www.elephantsql.com/). Make sure to pick the free tier for demoing purposes)
+Spin up a PostgreeSQL database (I've used [https://cockroachlabs.cloud/](https://cockroachlabs.cloud/). Make sure to pick the free tier for demoing purposes)
 
 ```bash
 touch .env
