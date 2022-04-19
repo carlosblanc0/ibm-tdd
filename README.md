@@ -13,7 +13,7 @@ A more in-depth wirte-up on end-to-end tests, and testing-driven devleopment in 
 - End-to-End: programmatically simulates end user behavior. Usually has its own testing/mock database - which is what we've done during the scope of this project. See [prisma-test-enviroment.ts](prisma-test-enviroment.ts) for more details. 
 
 ## Rationale
-- In this instance, I've used a SQL database for testing purposes to simulate a real world scenario where there's a need to for not only testing suite, but also distinct databases; one for testing, one for production. For this example, and according to the pattern called Command/Query Segregation, CreateCleint.spec.ts isn't returning anything since it's a Write/update/delete command as opposed to a query where the expected behavior would be to return something. See IBM's Architecture Center article for more information on [CQRS](https://www.ibm.com/cloud/architecture/architectures/event-driven-cqrs-pattern/). 
+- In this instance, I've used a SQL database for testing purposes to simulate a real world scenario where there's a need to for not only testing suite, but also distinct databases; one for testing, one for production. For this example, and according to the pattern called Command/Query Segregation, CreateCleint.spec.ts isn't returning anything since it's a WRITE/UPDATE/DELETE command as opposed to a query where the expected behavior would be to return something. See IBM's Architecture Center article for more information on [CQRS](https://www.ibm.com/cloud/architecture/architectures/event-driven-cqrs-pattern/). 
 
 ## Reports
 ![report](https://github.com/carlosblanc0/ibm-tdd/blob/main/assets/report.png?raw=true)
