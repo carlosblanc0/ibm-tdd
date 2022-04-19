@@ -5,7 +5,7 @@
 ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
 ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
 
-A more in-depth wirte-up on end-to-end tests, and testing.
+A more in-depth wirte-up on end-to-end tests, and testing-driven devleopment in general.
 
 ## Introduction
 - Unit tests: usually used to test a given compononent in an isolated envinrement.
